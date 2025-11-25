@@ -1,13 +1,74 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>proyecto</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Shopping Cart 🛒</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="header-left">
+          <div class="cart-icon">🛒</div>
+          <div class="header-info">
+            <h1>Mi Carrito</h1>
+            <p id="cart-count">0 productos</p>
+          </div>
+        </div>
+        <div class="header-right">
+          <p class="cost-label">Costo aprox.</p>
+          <p id="total-cost" class="total-cost">$0.00</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Products Panel -->
+      <section class="products-panel">
+        <h2>Productos Disponibles</h2>
+        <div id="products-grid" class="products-grid"></div>
+      </section>
+
+      <!-- Cart Panel -->
+      <section class="cart-panel">
+        <h2>Mi Lista</h2>
+        <div id="cart-items" class="cart-items">
+          <div class="empty-cart">
+            <div class="empty-icon">🛒</div>
+            <p>Carrito vacío</p>
+            <small>Agrega productos desde el panel de la izquierda</small>
+          </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div id="progress-container" class="progress-container" style="display: none;">
+          <div class="progress-info">
+            <span>Progreso</span>
+            <span id="progress-text">0/0</span>
+          </div>
+          <div class="progress-bar">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Instructions -->
+    <footer class="instructions">
+      <p>💡 <strong>Desliza</strong> → derecha para marcar comprado, ← izquierda para eliminar</p>
+    </footer>
+
+    <!-- Rocket Animation -->
+    <div id="rocket" class="rocket hidden">🚀</div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
